@@ -1,0 +1,66 @@
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color:white;
+}
+
+.left-nav,.menu-items,.right-nav{
+  display: flex;
+}
+
+.menu-items li{
+  list-style-type: none;
+  padding:10px;
+  margin:10px;
+}
+
+.profile-pic{
+  width:40px;
+  height:40px;
+}
+
+.right-nav{
+  align-items: center;
+  margin-right:30px;
+}
+
+.left-nav{
+  margin-left:30px;
+}
+.right-nav input,.right-nav button{
+  margin:10px;
+}
+
+.link-active{
+  color:lime;
+}
+
+.link-default{
+  color:white;
+}
+
+.menu-items li a{
+  text-decoration: none;
+}
+
+.search-input{
+  padding:5px;
+  border:none;
+  outline:none;
+}
+
+.login-btn, .signup-btn{
+  border:1px solid lightgray;
+  padding:5px;
+  width:60px;
+  background-color: black;
+  color:white;
+}
+
+.login-btn:hover, .signup-btn:hover{
+  background-color: orange;
+  color:white;
+  transition:0.5s;
+}

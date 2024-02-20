@@ -1,25 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import Dashboard from './components/Dashboard';
+import Albums from './components/Albums';
+import About from './components/About';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route
+        path='/'
+        element={<Home />}
+      />
+      <Route
+        path='home'
+        element={<Home />}
+      >
+        <Route path="dashboard" element={<Dashboard />} />
+      <Route path="albums" element={<Albums />} />
+        <Route path="about" element={<About />} />
+      </Route>
+      <Route
+        path='home/:id'
+        element={<Home />}
+      />
+      {/* <Route
+        path='home/*'
+        element={<Home/>}
+      /> */}
+
+      <Route
+        path='*'
+        element={<h1>404 Not Found</h1>}
+      />
+    </Routes>
   );
 }
 
